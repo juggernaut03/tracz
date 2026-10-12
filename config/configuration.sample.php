@@ -15,7 +15,7 @@ class Config
 {
     /* General */
 
-    public $sitename = 'Leantime';                        // Name of your site, can be changed later
+    public $sitename = 'Tracz by RigvedIT';                        // Name of your site, can be changed later
 
     public $language = 'en-US';                           // Default language
 

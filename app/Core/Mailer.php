@@ -56,7 +56,7 @@ class Mailer
     /**
      * Sender display name used when LEAN_EMAIL_FROM_NAME is not configured.
      */
-    public const DEFAULT_FROM_NAME = 'Leantime';
+    public const DEFAULT_FROM_NAME = 'Tracz by RigvedIT';
 
     private bool $hideWrapper = false;
 

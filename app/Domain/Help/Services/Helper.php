@@ -419,7 +419,7 @@ class Helper
 
         $values = [
             'name' => 'My Project',
-            'details' => 'Welcome to your first project in Leantime!<br />This is your space to organize tasks, track goals, and plan your work. Feel free to modify anything here or create additional projects as you grow. This project is just for you to get started',
+            'details' => 'Welcome to your first project in Tracz by RigvedIT!<br />This is your space to organize tasks, track goals, and plan your work. Feel free to modify anything here or create additional projects as you grow. This project is just for you to get started',
             'clientId' => 0,
             'hourBudget' => 0,
             'assignedUsers' => [['id' => $userId, 'projectRole' => '']],
@@ -477,13 +477,13 @@ class Helper
         if (in_array($role, ['admin', 'owner', 'manager'])) {
 
             $values['headline'] = '👥 Invite your team mates';
-            $values['description'] = 'Whether you are working with someone or just need an accountability buddy. Using Leantime as a group helps to stay on track and motivated <a href="'.BASE_URL.'/users/showAll">User Management</a>';
+            $values['description'] = 'Whether you are working with someone or just need an accountability buddy. Using Tracz by RigvedIT as a group helps to stay on track and motivated <a href="'.BASE_URL.'/users/showAll">User Management</a>';
             $values['dateToFinish'] = dtHelper()->userNow()->addDays(1)->formatDateForUser();
             $ticketService->quickAddTicket($values);
         }
 
         $values['headline'] = '🎯 Learn More about Leantime\'s Project Structure';
-        $values['description'] = 'We have a lot of additional resources on our help documentation. To learn more about project structure in Leantime and best practices visit: <a href="https://support.leantime.io/en/article/getting-started-in-leantime-an-introduction-to-setting-structure-to-the-work-14t1qip/" target="_blank">https://help.leantime.io</a>';
+        $values['description'] = 'We have a lot of additional resources on our help documentation. To learn more about project structure in Tracz by RigvedIT and best practices visit: <a href="https://support.leantime.io/en/article/getting-started-in-leantime-an-introduction-to-setting-structure-to-the-work-14t1qip/" target="_blank">https://help.leantime.io</a>';
         $values['dateToFinish'] = dtHelper()->userNow()->addDays(1)->formatDateForUser();
         $ticketService->quickAddTicket($values);
 
@@ -502,7 +502,7 @@ class Helper
         $values['dateToFinish'] = dtHelper()->userNow()->addDays(1)->formatDateForUser();
         $ticketService->quickAddTicket($values);
 
-        $values['headline'] = '🖼️ Complete my Leantime profile';
+        $values['headline'] = '🖼️ Complete my Tracz by RigvedIT profile';
         $values['description'] = 'Update profile picture and complete work preferences to personalize my experience. <a href="'.BASE_URL.'/users/editOwn/">My Profile</a>';
         $values['dateToFinish'] = dtHelper()->userNow()->addDays(1)->formatDateForUser();
         $ticketService->quickAddTicket($values);

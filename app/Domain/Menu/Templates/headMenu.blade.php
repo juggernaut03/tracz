@@ -179,24 +179,8 @@
                     {!! __("menu.knowledge_base") !!}
                     </a>
             </li>
-            <li>
-                <a href='https://github.com/Leantime/leantime/issues' target="_blank">
-                    {!! __("menu.submit_bug") !!}
-                </a>
-            </li>
-            <li class="nav-header border">{!! __("menu.leantime_community") !!}</li>
-            <li>
-                <a href='https://discord.gg/4zMzJtAq9z' target="_blank">
-                    {!! __("menu.community") !!}
-                </a>
-            </li>
-            <li>
-                <a href='https://leantime.io/contact-us' target="_blank">
-                    {!! __("menu.contact_us") !!}
-                </a>
-            </li>
             <li class="nav-header border">{{ __('label.system', 'System') }}</li>
-            <li><a href="https://github.com/Leantime/leantime/releases" target="_blank">Leantime V{{ app(\Leantime\Core\Configuration\AppSettings::class)->appVersion }}</a></li>
+            <li><a href="javascript:void(0);">Tracz by RigvedIT V{{ app(\Leantime\Core\Configuration\AppSettings::class)->appVersion }}</a></li>
         </ul>
     </li>
 

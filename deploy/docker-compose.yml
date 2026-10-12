@@ -1,0 +1,57 @@
+# Production stack for tracz.erocventures.tech.
+# Project name stays "leantime" so the existing data volumes are reused.
+name: leantime
+
+services:
+  leantime_db:
+    image: mysql:8.4
+    container_name: mysql_leantime
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    env_file: /opt/leantime/.env
+    networks:
+      - leantime-net
+    command: --character-set-server=UTF8MB4 --collation-server=UTF8MB4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  leantime:
+    image: tracz-app:latest
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: leantime
+    restart: unless-stopped
+    env_file: /opt/leantime/.env
+    security_opt:
+      - no-new-privileges:true
+    cap_add:
+      - CAP_CHOWN
+      - CAP_SETGID
+      - CAP_SETUID
+    ports:
+      - "127.0.0.1:8080:8080"   # only reachable via Caddy on this host
+    networks:
+      - leantime-net
+    volumes:
+      - public_userfiles:/var/www/html/public/userfiles
+      - userfiles:/var/www/html/userfiles
+      - plugins:/var/www/html/app/Plugins
+      - logs:/var/www/html/storage/logs
+    depends_on:
+      leantime_db:
+        condition: service_healthy
+
+volumes:
+  db_data:
+  userfiles:
+  public_userfiles:
+  plugins:
+  logs:
+
+networks:
+  leantime-net:

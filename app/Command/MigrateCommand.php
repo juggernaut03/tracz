@@ -19,7 +19,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
  */
 #[AsCommand(
     name: 'db:migrate',
-    description: 'Runs and pending Leantime Database Migrations',
+    description: 'Runs and pending Tracz by RigvedIT Database Migrations',
 )]
 class MigrateCommand extends Command
 {
@@ -61,7 +61,7 @@ class MigrateCommand extends Command
                         'password' => '',
                         'firstname' => '',
                         'lastname' => '',
-                        'company' => 'Leantime',
+                        'company' => 'Tracz by RigvedIT',
                     ];
                 } else {
                     $email = $input->getOption('email');

@@ -546,7 +546,7 @@ class Auth implements Authenticatable
                     $actual_link = $trustedAppUrl.'/auth/resetPw/'.$resetToken;
                     $mailer->setHtml(sprintf($this->language->__('email_notifications.password_reset_message'), $actual_link));
                     $to = [$username];
-                    $mailer->sendMail($to, 'Leantime System');
+                    $mailer->sendMail($to, 'Tracz by RigvedIT System');
 
                     return true;
                 }
@@ -819,7 +819,7 @@ class Auth implements Authenticatable
 
     public function verify2FA(string $code): bool
     {
-        $twoFactorAuthentication = new TwoFactorAuth('Leantime');
+        $twoFactorAuthentication = new TwoFactorAuth('Tracz by RigvedIT');
 
         return $twoFactorAuthentication->verifyCode(session('userdata.twoFASecret'), $code);
     }

@@ -492,7 +492,7 @@ class Users extends BaseService
         // The inviter identifies themselves in the body only (sanitized name + verified email);
         // the From header stays a fixed 'Leantime' so user content never reaches mail headers.
         $inviterName = NameSanitizer::clean(session('userdata.name') ?? '');
-        $inviterDisplay = $inviterName !== '' ? $inviterName : 'Leantime';
+        $inviterDisplay = $inviterName !== '' ? $inviterName : 'Tracz by RigvedIT';
 
         $inviterEmail = filter_var((string) (session('userdata.mail') ?? ''), FILTER_VALIDATE_EMAIL);
         if ($inviterEmail !== false) {
@@ -515,7 +515,7 @@ class Users extends BaseService
 
         $to = [$user];
 
-        return $mailer->sendMail($to, 'Leantime');
+        return $mailer->sendMail($to, 'Tracz by RigvedIT');
     }
 
     /**

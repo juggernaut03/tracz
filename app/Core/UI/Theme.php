@@ -260,7 +260,7 @@ class Theme
             }
         }
         $parsedColorSchemes['themeDefault'] = [
-            'name' => 'Leantime',
+            'name' => 'Tracz by RigvedIT',
             'primaryColor' => $this->iniData['general']['primaryColor'] ?? $this->colorSchemes['themeDefault']['primaryColor'],
             'secondaryColor' => $this->iniData['general']['secondaryColor'] ?? $this->colorSchemes['themeDefault']['secondaryColor'],
         ];

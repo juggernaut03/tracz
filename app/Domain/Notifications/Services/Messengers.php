@@ -56,7 +56,7 @@ class Messengers
      */
     public function sendNotificationToMessengers(NotificationModel $notification, $projectName, array|string $messengers = 'all'): void
     {
-        $this->projectName = $projectName ?? 'a Leantime project';
+        $this->projectName = $projectName ?? 'a Tracz by RigvedIT project';
 
         $messengersToSend = [];
         if (is_string($messengers) && $messengers == 'all') {
@@ -126,7 +126,7 @@ class Messengers
             $message = $this->prepareMessage($notification);
 
             $data = [
-                'username' => 'Leantime',
+                'username' => 'Tracz by RigvedIT',
                 'icon_url' => '',
                 'text' => '',
                 'attachments' => $message,

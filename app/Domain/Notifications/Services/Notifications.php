@@ -419,7 +419,7 @@ class Notifications
 
                     $taggedUserObject = $this->userRepository->getUser($taggedUser);
                     if (isset($taggedUserObject['username'])) {
-                        $mailer->sendMail([$taggedUserObject['username']], 'Leantime');
+                        $mailer->sendMail([$taggedUserObject['username']], 'Tracz by RigvedIT');
                     }
 
                     UserMentioned::dispatch(

@@ -958,7 +958,7 @@ class Calendar extends BaseService
             $response = $this->outboundHttpClient->get($url, [
                 'headers' => [
                     'Accept' => 'text/calendar',
-                    'User-Agent' => 'Leantime Calendar Integration v'.$this->config->appVersion,
+                    'User-Agent' => 'Tracz by RigvedIT Calendar Integration v'.$this->config->appVersion,
                 ],
             ]);
         } catch (\InvalidArgumentException) {

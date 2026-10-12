@@ -88,7 +88,7 @@ class Index extends Controller
 
         $payload = [
             'mobileAuthEnabled' => $mobileGate,
-            'instanceName' => (string) ($this->config->sitename ?: 'Leantime'),
+            'instanceName' => (string) ($this->config->sitename ?: 'Tracz by RigvedIT'),
             'version' => $this->appSettings->appVersion,
             'minAppVersion' => null,
             'authMethods' => $authMethods,
